@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang = "en" dir = "ltr">
+	<head>
+		
+		<title>Receipt Page</title>
+		
+		<meta charset = "urf-8">
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1">
+		<meta name = "description" content = " The Spark Foundation Web Development Task #1 Basic Banking System Receipt Page">
+		<meta name = "author" content = "Praveenkumar Senthilkumar">
+		
+		<link rel = "stylesheet" href = "{{url_for('static', filename = 'css/styles.css')}}">
+	
+	</head>
+	<body>
+		
+		<h1>Receipt Page</h1>-->
+		
+		<nav>
+			<label class = "logo"><a href="/"><span>&#127974;</span> Basic Banking System</a></label>
+			<ul>
+				<li><a href = "/customers">Customers</a></li>
+				<li><a href = "/transfers">Transfers</a></li>
+			</ul>
+		</nav>
+
+		
+		<div class = "receipt-container">
+			
+			{% if id %}
+			<div class = "receipt-message">
+					<center>
+						<strong>
+							<p class = "warning-symbol">&#9888; </p><br>
+							<p>
+								SORRY! <br><br> 
+								Insufficient Balance
+							</P>
+						</strong><br>
+						<button class = "back-to-transfer">
+							<a href = "/transfer/{{id}}">Back</a>
+						</button>
+					</center>
+			</div>
+			{% else %}
+			<div class = "receipt-message">
+				<center>
+					<strong>
+						<p class = "success-symbol"> &#9989; </p><br>
+						<p>
+							<h3>Transfer Succeeded</h3>
+						</p>
+					</strong><br>
+					<button class = "done-to-profile">
+						<a href = "/viewProfile/{{receipt_details["id"]}}">Done</a>
+					</button>
+				</center>
+			</div>
+			
+			<div  class = "receipt-box">
+				<table>
+					<thead>
+						<tr>
+							<th scope = "col">Sender Name</th>
+							<th scope = "col">Receiver Name</th>
+							<th scope = "col">Amount</th>
+							<th scope = "col">Date and Time</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>{{receipt_details["sender"]}}</td>
+							<td>{{receipt_details["receiver"]}}</td>
+							<td>&#8377; {{receipt_details["amount"]}}</td>
+							<td>{{receipt_details["date_time"]}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		{% endif %}
+		</div>
+	
+		
+		
+	<footer>
+			<p> &copy 2021 Made by Praveenkumar Senthilkumar</p>
+			<center><p>For The Spark Foundation - Web Development Task #1 Basic Banking System</p></center>
+			<p>#augbatch21</p>
+	</footer>
+	
+	</body>
+</html>

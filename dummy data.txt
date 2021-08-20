@@ -1,0 +1,65 @@
+gender:female
+name:Miss Francisca Hidalgo
+email:francisca.hidalgo@example.com
+"picture"
+"large":"https://randomuser.me/api/portraits/women/56.jpg","medium":"https://randomuser.me/api/portraits/med/women/56.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/women/56.jpg"
+
+
+gender:female
+name:Ms Alice Roy
+email:alice.roy@example.com
+picture:
+"large":"https://randomuser.me/api/portraits/women/47.jpg","medium":"https://randomuser.me/api/portraits/med/women/47.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/women/47.jpg"
+
+
+gender:male,
+name:Mr Cameron Smith
+email:cameron.smith@example.com
+picture:+{"large":"https://randomuser.me/api/portraits/men/38.jpg","medium":"https://randomuser.me/api/portraits/med/men/38.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/men/38.jpg"
+
+
+gender:female,
+name:Miss Clara Jensen
+email:clara.jensen@example.com
+picture:
+"large":"https://randomuser.me/api/portraits/women/46.jpg","medium":"https://randomuser.me/api/portraits/med/women/46.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/women/46.jpg"
+
+
+gender:female,
+name:Mrs Amy Ouellet
+email:amy.ouellet@example.com
+picture:
+large":"https://randomuser.me/api/portraits/women/96.jpg","medium":"https://randomuser.me/api/portraits/med/women/96.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/women/96.jpg"
+
+
+gender:female,
+name:Miss Ceylan Akgül
+email:ceylan.akgul@example.com
+picture:
+"large":"https://randomuser.me/api/portraits/women/24.jpg","medium":"https://randomuser.me/api/portraits/med/women/24.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/women/24.jpg"
+
+
+
+gender:male
+name:Mr Jacob Madsen
+email:jacob.madsen@example.com
+picture"large":"https://randomuser.me/api/portraits/men/25.jpg","medium":"https://randomuser.me/api/portraits/med/men/25.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/men/25.jpg"
+
+
+gender:male
+name:Mr Batur Aclan
+email:batur.aclan@example.com
+picture:"large":"https://randomuser.me/api/portraits/men/74.jpg","medium":"https://randomuser.me/api/portraits/med/men/74.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/men/74.jpg"
+
+
+gender:male
+name:Mr Fernando Hale
+email:fernando.hale@example.com
+picture:
+large":"https://randomuser.me/api/portraits/men/16.jpg","medium":"https://randomuser.me/api/portraits/med/men/16.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/men/16.jpg
+
+gender:male
+name:Mr Randall James
+email:randall.james@example.com
+picture:
+large":"https://randomuser.me/api/portraits/men/92.jpg","medium":"https://randomuser.me/api/portraits/med/men/92.jpg","thumbnail":"https://randomuser.me/api/portraits/thumb/men/92.jpg

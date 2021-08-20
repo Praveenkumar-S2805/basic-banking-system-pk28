@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang = "en" dir = "ltr">
+	<head>
+		
+		<title>Transfers Page</title>
+		
+		<meta charset = "utf-8">
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1">
+		<meta name = "description" content = "The Spark Foundation Web development Task #1 Basic Banking System Transfers Page">
+		<meta name = "author" content = "Praveenkumar Senthilkumar">
+		
+		<link rel = "stylesheet" href="{{url_for('static', filename = 'css/styles.css')}}">
+	
+	</head>
+	
+	<body>
+		
+		<nav>
+			<label class = "logo"><a href="/"><span>&#127974;</span> Basic Banking System</a></label>
+			<ul>
+				<li><a href = "/customers">Customers</a></li>
+				<li><a href = "/transfers" class = "active">Transfers</a></li>
+			</ul>
+		</nav>
+		
+		<div class = "transfers-main-container">
+			<div class = "transfers-container">
+				<table class = "transfers-table">
+					<caption><h1>Transfers List</h1></caption>
+					<thead>
+						<tr>
+							<th scope = "col">TransferID</th>
+							<th scope = "col">Sender Name</th>
+							<th scope = "col">Receiver Name</th>
+							<th scope = "col">Amount</th>
+							<th scope = "col">Date and Time</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for datum in data %}
+							<tr>
+								<th scope = "row">{{datum.transfer_id}}</th>
+								<td>{{datum.sender_name}}</td>
+								<td>{{datum.receiver_name}}</td>
+								<td>&#8377; {{datum.amount}}</td>
+								<td>{{datum.date_time}}</td>
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</div>
+		</div>
+		
+		<footer>
+			<p> &copy 2021 Made by Praveenkumar Senthilkumar</p>
+			<center><p>For The Spark Foundation - Web Development Task #1 Basic Banking System</p></center>
+			<p>#augbatch21</p>
+		</footer>
+		
+	</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang = "en" dir = "ltr">
+	<head>
+		
+		<title>Transfer Page</title>
+		
+		<meta charset = "urf-8">
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1>
+		<meta name = "description" content = "The Spark Foundation Web Development Task #1 Basic Banking System Transfer Page">
+		<meta name = "author" content = "Praveenkumar Senthilkumar">
+		
+		<link rel = "stylesheet" href = "{{url_for('static', filename = 'css/styles.css')}}"> 
+	
+	</head>
+	
+	<body>
+		
+		<nav>
+			<label class = "logo"><a href="/"><span>&#127974;</span> Basic Banking System</a></label>
+			<ul>
+				<li><a href = "/customers">Customers</a></li>
+				<li><a href = "/transfers">Transfers</a></li>
+			</ul>
+		</nav>
+		
+		<!--<h1>Transfer Page</h1>-->
+		
+		
+		
+		
+		{% set sender = data.pop() %}
+		
+		<div class = "transfer-main-container">
+			
+			<div class = "transfer-sender-container">
+				<div class = "transfer-sender-box">
+					<center>
+						{{sender.customer_id}}<br>
+						<figure>
+							<img src = {{ sender.image}} /><br>
+							<figcaption>
+								{{sender.name}} <br>
+								<!--&#9993; : {{sender.email}}<br>-->
+							</figcaption>
+						</figure>
+						<button class = "transfer-sender-balance">&#8377; {{sender.current_balance}} </button><br>
+					</center>
+				</div>
+			</div>
+			
+			<div class = "transfer-receivers-container">
+			
+				<form action = "\addTransfer" method = "POST">
+					<label>Receivers</label><br>
+					<input type = "hidden" name = "sender_id" value = {{ sender.customer_id }}>				
+						<div class = "transfer-receivers-form">
+						{% for datum in data: %}
+							<div class = "transfer-receivers-box">
+								<center>
+									{{datum.customer_id}}<br>
+									<figure>
+										<img src = {{ datum.image}} /><br>
+										<figcaption>
+											{{datum.name}} <br>
+											<!--&#9993; : {{datum.email}}<br>-->
+										</figcaption>
+									</figure>
+									<input type = "radio" id = "receiver" name = "receiver_id" value = {{ datum.customer_id }}>
+								</center>
+							</div><br>
+						{% endfor %}
+						</div>
+						<label>Amount</label><br>
+						<div class = "transfer-receivers-amount">
+							<center>
+								&#8377; <input type = "text" name = "amount"><br><br>
+							</center>
+						</div>
+						<div class = "transfer-button">
+							<center>
+								<button type = "submit">Transfer</button>
+							</center>
+						</div>
+						<div class = "transfer-cancel">
+							<center>
+								<button type = "reset">Cancel</button>
+							</center>
+						</div>
+						
+				</form>
+				
+			</div>
+		
+		
+		</div>
+
+		<footer>
+			<p> &copy 2021 Made by Praveenkumar Senthilkumar</p>
+			<center><p>For The Spark Foundation - Web Development Task #1 Basic Banking System</p></center>
+			<p>#augbatch21</p>
+		</footer>
+		
+	</body>
+</html>

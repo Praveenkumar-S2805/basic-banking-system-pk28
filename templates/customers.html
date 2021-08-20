@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang = "en" dir = "ltr">
+
+	<head>
+
+		<title>Customers Page</title>
+
+		<meta charset = "utf-8">
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1">
+		<meta http-equiv = "x-ua-compatible" content = "ie-edge">
+		<meta name = "description" content = "The Spark Foundation Web development Task #1 Basic Banking System Customers Page">
+		<meta name = "author" content = "Praveenkumar Senthilkumar">
+
+		<link rel = "stylesheet" href="{{url_for('static', filename = 'css/styles.css')}}">
+
+	</head>
+
+	<body>
+		
+		<nav>
+			<label class = "logo"><a href="/"><span>&#127974;</span> Basic Banking System</a></label>
+			<ul>
+				<li><a class = "active" href = "/customers">Customers</a></li>
+				<li><a href = "/transfers">Transfers</a></li>
+			</ul>
+		</nav>
+		
+		
+		
+		<!--<h3>Customers List</h3>-->
+		
+		<div class = "customers-container">
+		
+		{% for datum in data: %}
+			
+			<div class="customers-box">
+				<center>
+					<p>
+						<br><label>{{datum.customer_id}}<label><br><br>
+						<figure>
+							<img src = {{ datum.image }} alt = {{ datum.name }} >
+								<figcaption>
+									{{datum.name}}
+								</figcaption>
+						</figure>
+						<br>
+							&#9993; {{datum.email}}<br><br>
+							<button class = "customers-balance-button">&#8377; {{datum.current_balance}} </button><br><br>
+							<button class = "customers-view-button"><a href = "/viewProfile/{{datum.customer_id}}">View Profile</a></button>
+						<br>
+					</p>	
+				</center>
+			</div>
+			
+		{% endfor %}
+		
+		</div>
+		
+		<footer>
+			<p> &copy 2021 Made by Praveenkumar Senthilkumar</p>
+			<center><p>For The Spark Foundation - Web Development Task #1 Basic Banking System</p></center>
+			<p>#augbatch21</p>
+		</footer>
+			
+	</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang = "en" dir = "ltr">
+	
+	<head>
+	
+		<title>Basic Banking System</title>
+		
+		<meta charset = "utf-8">
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+		<meta http-equiv = "x-ua-compatible" content = "ie-edge">
+		<meta name = "description" content = "The Spark Foundation Web Development Task #1 Basic Banking System Home Page">
+		<meta name = "author" content = "Praveenkumar Senthilkumar">
+		
+		<link rel = "stylesheet" href = "{{url_for('static', filename = 'css/styles.css')}}">
+	
+	</head>
+	
+	<body>
+		
+		<nav>
+			<label class = "logo"><a href="/"><span>&#127974;</span> Basic Banking System</a></label>
+			<ul>
+				<li><a class = "active" href = "#">Home</a></li>
+				<li><a href = "#about">About</a></li>
+				<li><a href = "/customers">Customers</a></li>
+				<li><a href = "/transfers">Transfers</a></li>
+			</ul>
+		</nav>
+		
+		<section>
+				<img class = "bank-logo" src = "{{url_for('static', filename = '/images/1.png')}}" alt = "bank">
+				<div class = "sub-section">			
+					<a href = "/customers"><img class = "customers-logo"  src = "{{url_for('static', filename = '/images/customers.png')}}" alt = "Customers"></a>
+					<a href = "/transfers"><img class = "transfers-logo" src = "{{url_for('static', filename = '/images/transfers.jpg')}}" alt = "Transfers"></a>
+				</div>
+		</section>
+		
+		
+		<section id = "about">
+		
+			<h1>About</h1>
+		
+				<br><br><br>
+				
+				This is My Task #1 in The Graduate Rotational Internship Program (GRIP) by The Spark Foundation (TSF).
+				
+				<strong>Objective</strong>
+					The Objective of this task is to create a simple dynamic website with creating 10 dummy customers data in database.
+					
+				
+				<br>
+			
+		
+		
+			<div class="social-links">
+				<ul>
+					<li>
+						<a href = "https://twitter.com/Praveen280502" target = "_blank" class="twitter"><img src = "{{url_for('static', filename = '/images/twitter-logo.png')}}" alt = "Twitter"></a>
+					</li>				
+					<li>
+						<a href = "mailto: 2k19cse069@kiot.ac.in" target = "_blank" class="gmail"><img src = "{{url_for('static', filename = '/images/gmail-logo.png')}}" alt = "G-Mail" ></a>
+					</li>
+					<li>
+						<a href = "https://www.linkedin.com/in/praveenkumar-senthilkumar" target = "_blank" class="linkedin" ><img src="{{url_for('static', filename = '/images/linkedin-logo.png')}}" alt = "Linkedin" ></a>
+					</li>
+					<li>
+						<a href = "https://github.com/Praveenkumar-S2805" target = "_blank" class="github"><img src = "{{url_for('static', filename = '/images/youtube-logo.png')}}" alt = "Github" ></a>
+					</li>
+				</ul>
+			</div>
+		</section>
+		
+		
+		<footer>
+			<p> &copy 2021 Made by Praveenkumar Senthilkumar</p>
+			<center><p>For The Spark Foundation - Web Development Task #1 Basic Banking System</p></center>
+			<p>#augbatch21</p>
+		</footer>
+	
+	</body>
+
+</html>

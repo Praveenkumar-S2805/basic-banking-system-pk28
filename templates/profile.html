@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang = "en" dir = "ltr">
+	<head>
+		
+		<title>Profile Page</title>
+		
+		<meta charset = "utf-8">
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1">
+		<meta name = "description" content = "The Spark Foundation Web Development Task #1 Basic Banking System Profile Page">
+		<meta name = "author" content = "Praveenkumar Senthilkumar">
+		
+		<link rel = "stylesheet" href = "{{url_for('static', filename = 'css/styles.css')}}">
+	
+	</head>
+	<body>
+		
+		<h1>Profile Page</h1>-->
+		
+		<nav>
+			<label class = "logo"><a href="/"><span>&#127974;</span> Basic Banking System</a></label>
+			<ul>
+				<li><a class = "active" href = "/customers">Customers</a></li>
+				<li><a href = "/transfers">Transfers</a></li>
+			</ul>
+		</nav>
+
+		
+		
+		<div class = "profile-container">
+			<div class = "profile-box">
+				<center>
+					{{data.customer_id}}<br>
+					<figure>
+						<img src = {{ data.image}} />
+						<figcaption>
+							{{data.name}}<br>
+							&#9993; : {{data.email}}<br>
+						</figcaption>
+					</figure>
+				</center>
+				<button class = "profile-balance-button">&#8377; {{data.current_balance}} </button>
+				<button class = "profile-start-button"><a href = "/transfer/{{data.customer_id}}">Start Transfer</a></button>
+				<button class = "profile-history-button"><a href = "/history/{{data.customer_id}}">Transfer History</a></button>
+			</div>
+		</div>
+		
+		<footer>
+			<p> &copy 2021 Made by Praveenkumar Senthilkumar</p>
+			<center><p>For The Spark Foundation - Web Development Task #1 Basic Banking System</p></center>
+			<p>#augbatch21</p>
+		</footer>
+	
+	</body>
+</html>
